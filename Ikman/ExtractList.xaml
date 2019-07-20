@@ -63,6 +63,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'NewandUse Page'" sap:VirtualizedContainerService.HintSize="430.4,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="722a4c424ac29e9910f9a333c4f5b0b4" Selector="&lt;html app='chrome.exe' title='New and Used Cars for sale in Sri Lanka | ikman.lk' /&gt;">

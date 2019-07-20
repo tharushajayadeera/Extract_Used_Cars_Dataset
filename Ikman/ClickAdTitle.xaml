@@ -77,7 +77,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Ikman'" sap:VirtualizedContainerService.HintSize="430.4,411.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3322cee21c9510980871c7545ec0aad5" Selector="&lt;html app='chrome.exe' title='*ikman.lk' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Ikman'" sap:VirtualizedContainerService.HintSize="430.4,411.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3322cee21c9510980871c7545ec0aad5" Selector="&lt;html app='chrome.exe' title='New and Used Cars for sale in Sri Lanka | ikman.lk' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

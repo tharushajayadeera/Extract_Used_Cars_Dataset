@@ -65,7 +65,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'CarsToyot Page'" sap:VirtualizedContainerService.HintSize="430.4,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="792c678943e9a4f38f222e84a9913208" Selector="&lt;html app='chrome.exe' title='*ikman.lk' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'CarsToyot Page'" sap:VirtualizedContainerService.HintSize="430.4,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="792c678943e9a4f38f222e84a9913208" Selector="&lt;html app='chrome.exe' title='*| ikman.lk' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
