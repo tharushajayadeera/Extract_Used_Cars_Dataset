@@ -59,28 +59,27 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="468.8,440" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="468.8,440" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'NewandUse Page'" sap:VirtualizedContainerService.HintSize="430.4,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="722a4c424ac29e9910f9a333c4f5b0b4" Selector="&lt;html app='chrome.exe' title='New and Used Cars for sale in Sri Lanka | ikman.lk' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'ToyotaCor Page'" sap:VirtualizedContainerService.HintSize="430.4,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="699f8bab7696169f54b15b43c659f970" Selector="&lt;html app='chrome.exe' title='*ikman.lk' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368.8,200" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368.8,200" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[out_ExtractedAdTitles]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'BODY'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Title' attr='text'&gt;&lt;webctrl tag='div' class='app-content' idx='1'/&gt;&lt;webctrl tag='div' class='container main' idx='1'/&gt;&lt;webctrl tag='div' class='serp-listing' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel is-rounded serp-panel' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel-content ui-panel-block' idx='1'/&gt;&lt;webctrl tag='div' class='row' idx='1'/&gt;&lt;webctrl tag='div' class='col-12 lg-9' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel is-transparent serp-results' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel-content ui-panel-block' idx='1'/&gt;&lt;webctrl tag='div' class='row lg-g' idx='1'/&gt;&lt;webctrl tag='div' class='col-12 lg-9' idx='1'/&gt;&lt;webctrl tag='div' class='serp-items' idx='1'/&gt;&lt;webctrl tag='div' class='ui-item'/&gt;&lt;webctrl tag='div' class='item-content' idx='1'/&gt;&lt;webctrl tag='a' class='item-title h4' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_5" MaxNumberOfResults="100">
+              <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[out_ExtractedAdTitles]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'UL'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Title' attr='text'&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='a' class='card-link--3ssYv' idx='1'/&gt;&lt;webctrl tag='div' class='container--2uFyv' idx='1'/&gt;&lt;webctrl tag='div' class='content--3JNQz' idx='1'/&gt;&lt;webctrl tag='span' class='title--3yncE' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100">
                 <ui:ExtractData.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="019d2381f42613907e404e5bcf851c71" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="COMPLETE" />
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="871c55844106ae2fececd4d41f8289e8" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul' parentid='app-wrapper' tag='UL' /&gt;" WaitForReady="COMPLETE" />
                 </ui:ExtractData.Target>
               </ui:ExtractData>
             </Sequence>

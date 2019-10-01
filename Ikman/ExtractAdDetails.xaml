@@ -65,31 +65,30 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="468.8,649.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="468.8,649.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'CarsToyot Page'" sap:VirtualizedContainerService.HintSize="430.4,556.8" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="792c678943e9a4f38f222e84a9913208" Selector="&lt;html app='chrome.exe' title='*| ikman.lk' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'CarsToyot Page'" sap:VirtualizedContainerService.HintSize="430.4,556.8" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="20802d2f01aba6d0b182c53ff8ebd473" Selector="&lt;html app='chrome.exe' title='*ikman.lk' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368.8,409.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368.8,409.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[out_ExtractedAdDetails]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'BODY'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='AdDetails' attr='text'&gt;&lt;webctrl tag='div' class='app-content' idx='1'/&gt;&lt;webctrl tag='div' class='container main' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel is-rounded item-detail' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel-content ui-panel-block' idx='1'/&gt;&lt;webctrl tag='div' class='row lg-g' idx='2'/&gt;&lt;webctrl tag='div' class='col-12 lg-8 item-body' idx='1'/&gt;&lt;webctrl tag='div' class='row lg-g' idx='1'/&gt;&lt;webctrl tag='div' class='col-12 lg-4' idx='1'/&gt;&lt;webctrl tag='div' class='item-properties' idx='1'/&gt;&lt;webctrl tag='dl'/&gt;&lt;webctrl tag='dd' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100">
+              <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[out_ExtractedAdDetails]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'BODY'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='AdDetails' attr='text'&gt;&lt;webctrl tag='div' class='app-content' idx='1'/&gt;&lt;webctrl tag='div' class='container main' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel is-rounded item-detail' idx='1'/&gt;&lt;webctrl tag='div' class='ui-panel-content ui-panel-block' idx='1'/&gt;&lt;webctrl tag='div' class='row lg-g' idx='2'/&gt;&lt;webctrl tag='div' class='col-12 lg-8 item-body' idx='1'/&gt;&lt;webctrl tag='div' class='row lg-g' idx='1'/&gt;&lt;webctrl tag='div' class='col-12 lg-4' idx='1'/&gt;&lt;webctrl tag='div' class='item-properties' idx='1'/&gt;&lt;webctrl tag='dl'/&gt;&lt;webctrl tag='dd' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_5" MaxNumberOfResults="100">
                 <ui:ExtractData.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c7b41304d265b718f32f16c5c7d8d8bd" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="COMPLETE" />
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b22552c50f6eb86255d6966e7852210d" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="COMPLETE" />
                 </ui:ExtractData.Target>
               </ui:ExtractData>
-              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Price'" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Price'" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
                 <ui:GetValue.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="dbbf0888570c1e07993ef7ca6083a70e" Selector="&lt;webctrl aaname='Rs ' tag='DIV' /&gt;" WaitForReady="INTERACTIVE" />
                 </ui:GetValue.Target>
@@ -97,7 +96,7 @@
                   <OutArgument x:TypeArguments="ui:GenericValue">[Price]</OutArgument>
                 </ui:GetValue.Value>
               </ui:GetValue>
-              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Price}]" DataTable="[out_ExtractedAdDetails]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="330.4,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Price}]" DataTable="[out_ExtractedAdDetails]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="330.4,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
             </Sequence>
           </ActivityAction>
         </ui:BrowserScope.Body>

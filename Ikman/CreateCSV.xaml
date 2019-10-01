@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>508.8,510.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1031.2,1561.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CreateCSV_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -57,7 +57,7 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateCSV" sap:VirtualizedContainerService.HintSize="468.8,390.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateCSV" sap:VirtualizedContainerService.HintSize="991.2,1481.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Brand" />
       <Variable x:TypeArguments="x:String" Name="Model" />
@@ -72,21 +72,22 @@
       <Variable x:TypeArguments="x:Int32" Name="Count" />
       <Variable x:TypeArguments="x:Boolean" Name="EditionMissing" />
       <Variable x:TypeArguments="x:String" Name="Price" />
+      <Variable x:TypeArguments="x:Boolean" Name="DatasetFileExist" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="430.4,297.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="952.8,1388.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="297.6,572" sap2010:WorkflowViewState.IdRef="Sequence_19">
+        <Sequence sap:VirtualizedContainerService.HintSize="919.2,1157.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign Count" sap:VirtualizedContainerService.HintSize="259.2,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign DisplayName="Assign Count" sap:VirtualizedContainerService.HintSize="880.8,60" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
             </Assign.To>
@@ -94,7 +95,7 @@
               <InArgument x:TypeArguments="x:Int32">1</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_ExtractedAdDetails]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="259.2,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[in_ExtractedAdDetails]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="880.8,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -234,7 +235,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <Sequence DisplayName="Make numeric values" sap:VirtualizedContainerService.HintSize="259.2,68.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence DisplayName="Make numeric values" sap:VirtualizedContainerService.HintSize="880.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -338,33 +339,41 @@
               </Assign>
             </Sequence>
           </Sequence>
-          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ModelYear,Condition,Transmission,BodyType,FuelType,EngineCapasity,Mileage,Price}]" DataTable="[in_DatasetDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="259.2,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-          <If Condition="[ModelYear = &quot;&quot; OR Condition = &quot;&quot; OR Transmission = &quot;&quot; OR BodyType = &quot;&quot; OR FuelType = &quot;&quot; OR EngineCapasity = &quot;&quot; OR Mileage =&quot;&quot; OR Price = &quot;&quot;]" DisplayName="If" sap:VirtualizedContainerService.HintSize="259.2,52.8" sap2010:WorkflowViewState.IdRef="If_3">
+          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ModelYear,Condition,Transmission,BodyType,FuelType,EngineCapasity,Mileage,Price}]" DataTable="[in_DatasetDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="880.8,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          <If Condition="[ModelYear = &quot;&quot; OR Condition = &quot;&quot; OR Transmission = &quot;&quot; OR BodyType = &quot;&quot; OR FuelType = &quot;&quot; OR EngineCapasity = &quot;&quot; OR Mileage =&quot;&quot; OR Price = &quot;&quot;]" DisplayName="If" sap:VirtualizedContainerService.HintSize="880.8,638.4" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="368.8,208.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap:VirtualizedContainerService.HintSize="740,488.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:AppendRange DataTable="[in_DatasetDataTable]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="330.4,116" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="Used_Car_Dataset.xlsx" />
+                <ui:PathExists DisplayName="Path Exists" Exists="[DatasetFileExist]" sap:VirtualizedContainerService.HintSize="701.6,90.4" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="C:\Users\Tharusha Jayadeera\Documents\UiPath\Extract_Used_Cars_Dataset\Sri_lankan_used_car_Dataset.xlsx" PathType="File" />
+                <If Condition="[DatasetFileExist]" sap:VirtualizedContainerService.HintSize="701.6,265.6" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If.Then>
+                    <ui:AppendRange DataTable="[in_DatasetDataTable]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="330.4,116" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\Tharusha Jayadeera\Documents\UiPath\Extract_Used_Cars_Dataset\Sri_lankan_used_car_Dataset.xlsx" />
+                  </If.Then>
+                  <If.Else>
+                    <ui:WriteRange AddHeaders="True" DataTable="[in_DatasetDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="330.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="C:\Users\Tharusha Jayadeera\Documents\UiPath\Extract_Used_Cars_Dataset\Sri_lankan_used_car_Dataset.xlsx" />
+                  </If.Else>
+                </If>
               </Sequence>
             </If.Else>
           </If>
-          <ui:ClearDataTable DataTable="[in_DatasetDataTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="259.2,22.4" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+          <ui:ClearDataTable DataTable="[in_DatasetDataTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="880.8,22.4" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,132.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="922.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
